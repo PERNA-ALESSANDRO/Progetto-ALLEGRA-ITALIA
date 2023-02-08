@@ -3,13 +3,16 @@
 //
 const int nPul = 6;
 const int pulsanti[nPul] = {2, 3, 4, 5, 6, 7};
-const int led[nPul] = {0, 1, 0, 1, 0, 1};
 const int LED_RED = 12;
 const int LED_GREEN = 13;
 const int BUZZER = 11;
+
 int statoPul;
+int ans[nPul];
+
 void rightTone();
 void wrongTone();
+
 void setup()
 {
   // Settaggio di tutti i pin collegati ai pulsanti come INPUT
@@ -21,13 +24,22 @@ void setup()
   pinMode(BUZZER, OUTPUT);
   pinMode(LED_RED, OUTPUT);
   pinMode(LED_GREEN, OUTPUT);
+  
+  // Settaggio bit di risposte
+  ans[0] = 0;	// Risposta 1
+  ans[1] = 1;	// Risposta 2
+  ans[2] = 0;	// Risposta 3
+  ans[3] = 1;	// Risposta 4
+  ans[4] = 0;	// Risposta 5
+  ans[5] = 1;	// Risposta 6
 }
+
 void loop()
 {
   for(int i = 0; i < nPul; i++){
     // Controllo pulsante premuto o no
     if(digitalRead(pulsanti[i]) == LOW){
-      if(led[i] == 0){
+      if(ans[i] == 0){
         digitalWrite(LED_RED, HIGH);
         wrongTone();
       } else {
@@ -44,6 +56,7 @@ void loop()
   }
   delay(10);
 }
+
 void rightTone(){
     tone(BUZZER, 783);
     delay(250);
@@ -53,6 +66,7 @@ void rightTone(){
     delay(500);
     noTone(BUZZER);
 }
+
 void wrongTone(){
   tone(BUZZER, 392);
   delay(250);
