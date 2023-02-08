@@ -17,7 +17,7 @@ Abbiamo scoperto come inizializzare costanti array e variabili, si inizializzano
 
 Visione video su sul funzionamento di Arduino per i partecipanti del gruppo che non sapeva cosa era Arduino: 
 ##
-[NON CONOSCI ARDUINO??? te lo insegno io PUNTATA ZERO <br> <img src="https://i.imgur.com/wRrlatd.jpeg" style="width:75%;">](https://youtu.be/RuttlCNnmVA)
+[NON CONOSCI ARDUINO??? te lo insegno io PUNTATA ZERO <br> <br> <img src="https://i.imgur.com/wRrlatd.jpeg" style="width:75%;">](https://youtu.be/RuttlCNnmVA)
 
 ## 07/02/2023: 
 
