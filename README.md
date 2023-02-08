@@ -36,3 +36,4 @@ In allegato ci sarà presente una foto del nostro circuito completo assieme ad u
 
 ![a](https://i.imgur.com/8rXkutu.png)
 
+#### Repo by: Lorenzo Bresciani e Alessandro Perna
