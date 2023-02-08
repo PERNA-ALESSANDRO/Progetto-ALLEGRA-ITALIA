@@ -21,7 +21,7 @@ Visione video su sul funzionamento di Arduino per i partecipanti del gruppo che 
 
 ## 07/02/2023: 
 
- siamo riusciti ad attaccare uno speaker al Arduino in modo che il suono si presenti nel caso l’utente inserisca una risposta vera / falsa, stiamo sperimentando righe di codice per il software che andrà a controllare Arduino, siamo riusciti a fare suonare lo speaker solo quando si clicca sul bottone grazie ad un'intuizione del nostro compagno Fusha. 
+ siamo riusciti ad attaccare uno speaker all'Arduino in modo che il suono si presenti nel caso l’utente inserisca una risposta vera / falsa, stiamo sperimentando righe di codice per il software che andrà a controllare Arduino, siamo riusciti a fare suonare lo speaker solo quando si clicca sul bottone grazie ad un'intuizione del nostro compagno Fusha. 
 
  
 
