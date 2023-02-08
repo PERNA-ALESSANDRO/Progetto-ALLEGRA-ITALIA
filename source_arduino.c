@@ -12,9 +12,12 @@ void rightTone();
 void wrongTone();
 void setup()
 {
+  // Settaggio di tutti i pin collegati ai pulsanti come INPUT
   for(int i = 0; i < nPul; i++){
     pinMode(pulsanti[i], INPUT);
   }
+  
+  // Settaggio dei pin dei led e buzzer come OUTPUT
   pinMode(BUZZER, OUTPUT);
   pinMode(LED_RED, OUTPUT);
   pinMode(LED_GREEN, OUTPUT);
@@ -22,6 +25,7 @@ void setup()
 void loop()
 {
   for(int i = 0; i < nPul; i++){
+    // Controllo pulsante premuto o no
     if(digitalRead(pulsanti[i]) == LOW){
       if(led[i] == 0){
         digitalWrite(LED_RED, HIGH);
@@ -30,6 +34,8 @@ void loop()
         digitalWrite(LED_GREEN, HIGH);
         rightTone();
       }
+      
+      // Spegnimento di tutti i led e buzzer
       delay(1000);
       digitalWrite(LED_RED, LOW);
       digitalWrite(LED_GREEN, LOW);
