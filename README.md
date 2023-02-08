@@ -36,4 +36,9 @@ In allegato ci sarà presente una foto del nostro circuito completo assieme ad u
 
 ![a](https://i.imgur.com/8rXkutu.png)
 
-#### Repo by: Lorenzo Bresciani e Alessandro Perna
+#### Repo by: Lorenzo Bresciani, Alessandro Perna
+#### Costruzione circuiti: Mattia Pasinetti
+#### Scrittura codice: Lorenzo Bresciani, Alessandro Perna, Serena Di Gangi
+#### Aggiornamento stato progetto: Mirel Fusha
+
+
