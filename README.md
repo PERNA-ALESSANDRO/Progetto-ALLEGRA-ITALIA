@@ -1,5 +1,4 @@
 # Progetto-ALLEGRA-ITALIA
-## Progetto Arduino 
 
 inizio: 01-02-2023	
 fine: 08-02-2023 
