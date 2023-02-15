@@ -8,14 +8,18 @@ const int LED_GREEN = 13;
 const int BUZZER = 11;
 
 int statoPul;
-int ans[nPul];
+int ans[nPul]{-1, -1, -1, -1, -1, -1};
 int pulsanti[nPul];
 
 void rightTone();
 void wrongTone();
 
+int a = Serial.available();
+
 void setup()
 {
+  Serial.begin(9600);
+  
   // Inizializzazione dell'array delle porte di INPUT
   for(int i = 0; i < nPul; i++){
   	pulsanti[i] = i + PORTA_MIN;
@@ -33,7 +37,10 @@ void setup()
   
   // Settaggio bit di risposte
   for(int i = 0; i < nPul; i++){
-  	ans[i] = insAns();
+    while(ans[i] == -1){
+  		ans[i] = insAns();
+    }
+
   }
 }
 
@@ -42,7 +49,7 @@ void loop()
   for(int i = 0; i < nPul; i++){
     // Controllo pulsante premuto o no
     if(digitalRead(pulsanti[i]) == LOW){
-      if(ans[i] == 0){
+      if(ans[i] == '0'){
         digitalWrite(LED_RED, HIGH);
         wrongTone();
       } else {
@@ -81,8 +88,12 @@ void wrongTone(){
 }
 
 int insAns(){
-  int p;
-  p = 1;
+  int inByte = -1;
+
+  if(Serial.available() > 0){
+    inByte = Serial.read();
+  }
   
-  return p;
+  return inByte;
 }
+
