@@ -1,20 +1,26 @@
 // Progetto-ALLEGRA-ITALIA
 // C code
 //
-const int nPul = 6;
-const int pulsanti[nPul] = {2, 3, 4, 5, 6, 7};
+const int PORTA_MIN = 2; // Cambiare la prima porta 
+const int nPul = 6; // Cambiare numero dei pulsanti
 const int LED_RED = 12;
 const int LED_GREEN = 13;
 const int BUZZER = 11;
 
 int statoPul;
 int ans[nPul];
+int pulsanti[nPul];
 
 void rightTone();
 void wrongTone();
 
 void setup()
 {
+  // Inizializzazione dell'array delle porte di INPUT
+  for(int i = 0; i < nPul; i++){
+  	pulsanti[i] = i + PORTA_MIN;
+  }
+  
   // Settaggio di tutti i pin collegati ai pulsanti come INPUT
   for(int i = 0; i < nPul; i++){
     pinMode(pulsanti[i], INPUT);
@@ -26,12 +32,9 @@ void setup()
   pinMode(LED_GREEN, OUTPUT);
   
   // Settaggio bit di risposte
-  ans[0] = 0;	// Risposta 1
-  ans[1] = 1;	// Risposta 2
-  ans[2] = 0;	// Risposta 3
-  ans[3] = 1;	// Risposta 4
-  ans[4] = 0;	// Risposta 5
-  ans[5] = 1;	// Risposta 6
+  for(int i = 0; i < nPul; i++){
+  	ans[i] = insAns();
+  }
 }
 
 void loop()
@@ -75,4 +78,11 @@ void wrongTone(){
   tone(BUZZER, 196);
   delay(500);
   noTone(BUZZER);
+}
+
+int insAns(){
+  int p;
+  p = 1;
+  
+  return p;
 }
