@@ -39,7 +39,7 @@ Utilizzando le funzioni del monitor seriale siamo riusciti a realizzare l'input 
 Abbiamo utilizzato ```Serial.begin``` per inizializzare la comunicazione tra Arduino e il monitor seriale, ```Serial.available``` per verificare che la porta seriale contenesse dei dati, e ```Serial.read``` per leggere i dati dalla porta.
 
 ### Progetto Completo
-[Collegamento alla pagina di Thikercad](https://www.tinkercad.com/things/4uLvf9hK6k3?sharecode=T54ZDOl_-0U8An-RBz6f-RuikNFHTi8sgLFsIUhpuMM)
+[Collegamento alla pagina di Tinkercad](https://www.tinkercad.com/things/4uLvf9hK6k3?sharecode=T54ZDOl_-0U8An-RBz6f-RuikNFHTi8sgLFsIUhpuMM)
 
 ![a](https://i.imgur.com/8rXkutu.png)
 
